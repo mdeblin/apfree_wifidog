@@ -52,7 +52,7 @@ add_executable(wdctl ${src_wdctl})
 add_executable(wifidog ${src_apfreewifidog})
 target_link_libraries(wifidog ${libs} ${fw3_libs} ${CURL_LIBRARIES})
 
-install(TARGETS wifidogx wdctl
+install(TARGETS wifidog wdctl
 		RUNTIME DESTINATION bin
 )
 
