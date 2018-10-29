@@ -148,7 +148,7 @@ wdctl_cmd_process(int argc, char **argv, int optind)
         }
     }
 ERR:
-    fprintf(stderr, "wdctlx: Error: Invalid command \"%s\"\n", *(argv + optind));
+    fprintf(stderr, "wdctl: Error: Invalid command \"%s\"\n", *(argv + optind));
     usage();
     exit(EXIT_FAILURE);
 }
@@ -225,7 +225,7 @@ send_request(int sock, const char *request)
 }
 
 /**
- * @brief execute command sending from wdctl_thread after process wdctlx's command
+ * @brief execute command sending from wdctl_thread after process wdctl's command
  * usually it execute 'dnsmasq restart', this feature depends openwrt system 
  *      
  */ 
