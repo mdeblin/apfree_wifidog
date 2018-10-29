@@ -41,7 +41,7 @@
 
 
 //>>> liudf added 20160114
-const char	*g_inner_trusted_domains = "www.kunteng.org.cn,wificoin.club,wfc.wificoin.club,wfc.xyblock.net,talkblock.org,mqtt.kunteng.org.cn,log1.kunteng.org.cn";
+const char	*g_inner_trusted_domains = "www.simetric.ru";
 
 /** @internal
  * Holds the current configuration of the gateway */
@@ -2289,9 +2289,8 @@ static void
 validate_popular_servers(void)
 {
 	if (config.popular_servers == NULL) {
-		add_popular_server("www.qq.com");
-		add_popular_server("www.kunteng.org");
-		add_popular_server("www.baidu.com");
+		add_popular_server("www.simetric.ru");
+		add_popular_server("www.yandex.ru");
 	}
 }
 
