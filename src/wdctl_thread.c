@@ -684,7 +684,7 @@ wdctl_clear_untrusted_maclist(struct bufferevent *fd)
 }
 
 /**
- * @brief save apfree wifidog' rule to /etc/config/wifidogx by uci 
+ * @brief save apfree wifidog' rule to /etc/config/wifidog by uci 
  * this feature depends on openwrt system
  * 
  */ 
@@ -701,39 +701,39 @@ user_cfg_save(void)
     const char *trusted_pan_domains 	= get_serialize_trusted_pan_domains();
 
     if(trusted_pan_domains) {
-        uci_set_value("wifidogx", "wifidog", "trusted_pan_domains", trusted_pan_domains);
+        uci_set_value("wifidog", "wifidog", "trusted_pan_domains", trusted_pan_domains);
     } else {
-        uci_del_value("wifidogx", "wifidog", "trusted_pan_domains");
+        uci_del_value("wifidog", "wifidog", "trusted_pan_domains");
     }
     
     if(trusted_domains) {
-        uci_set_value("wifidogx", "wifidog", "trusted_domains", trusted_domains);
+        uci_set_value("wifidog", "wifidog", "trusted_domains", trusted_domains);
     } else {
-        uci_del_value("wifidogx", "wifidog", "trusted_domains");
+        uci_del_value("wifidog", "wifidog", "trusted_domains");
     }
     
     if(trusted_iplist) {
-        uci_set_value("wifidogx", "wifidog", "trusted_iplist", trusted_iplist);
+        uci_set_value("wifidog", "wifidog", "trusted_iplist", trusted_iplist);
     } else {
-        uci_del_value("wifidogx", "wifidog", "trusted_iplist");
+        uci_del_value("wifidog", "wifidog", "trusted_iplist");
     }
     
     if(trusted_maclist) {
-        uci_set_value("wifidogx", "wifidog", "trusted_maclist", trusted_maclist);
+        uci_set_value("wifidog", "wifidog", "trusted_maclist", trusted_maclist);
     } else {
-        uci_del_value("wifidogx", "wifidog", "trusted_maclist");
+        uci_del_value("wifidog", "wifidog", "trusted_maclist");
     }
     
 	if(trusted_local_maclist) {
-        uci_set_value("wifidogx", "wifidog", "trusted_local_maclist", trusted_local_maclist);
+        uci_set_value("wifidog", "wifidog", "trusted_local_maclist", trusted_local_maclist);
     } else {
-        uci_del_value("wifidogx", "wifidog", "trusted_local_maclist");
+        uci_del_value("wifidog", "wifidog", "trusted_local_maclist");
     }
 	
     if(untrusted_maclist) {
-        uci_set_value("wifidogx", "wifidog", "untrusted_maclist", untrusted_maclist);
+        uci_set_value("wifidog", "wifidog", "untrusted_maclist", untrusted_maclist);
     } else {
-        uci_del_value("wifidogx", "wifidog", "untrusted_maclist");
+        uci_del_value("wifidog", "wifidog", "untrusted_maclist");
     }
 }
 

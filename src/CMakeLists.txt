@@ -48,11 +48,11 @@ set(fw3_libs
 
 ADD_DEFINITIONS(-O2 -Wall --std=gnu99 -Wmissing-declarations)
 
-add_executable(wdctlx ${src_wdctlx})
-add_executable(wifidogx ${src_apfreewifidog})
-target_link_libraries(wifidogx ${libs} ${fw3_libs} ${CURL_LIBRARIES})
+add_executable(wdctl ${src_wdctlx})
+add_executable(wifidog ${src_apfreewifidog})
+target_link_libraries(wifidog ${libs} ${fw3_libs} ${CURL_LIBRARIES})
 
-install(TARGETS wifidogx wdctlx
+install(TARGETS wifidogx wdctl
 		RUNTIME DESTINATION bin
 )
 
